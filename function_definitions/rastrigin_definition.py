@@ -1,7 +1,9 @@
 import math
 
-def RastriginFunction(x,y):
+import numpy as np
+
+
+def RastriginFunction(X,Y):
     a = 10
-    dimension = len(x)
-    sum_part = sum([(xi ** 2 - a * math.cos(2 * math.pi * xi)) for xi in x])
-    return a * dimension + sum_part
+    return (X**2 - 10 * np.cos(2 * np.pi * X)) + \
+            (Y**2 - 10 * np.cos(2 * np.pi * Y)) + 20
