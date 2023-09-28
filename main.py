@@ -10,15 +10,15 @@ from function_definitions.zakharov_definition import ZakharovFunction
 from plot_print import Print3DPlot
 
 # sphere
-# rosenbrock DONE
-# ackley DONE
+# rosenbrock
+# ackley
 # rastrigin
-# schwefel DONE
-# griewank DONE
-# Levy DONE
-#Michalewicz DONE
-#Zakharov DONE
+# schwefel
+# griewank
+# Levy
+#Michalewicz
+#Zakharov
 
 
 if __name__=="__main__":
-    Print3DPlot(ZakharovFunction)
+    Print3DPlot(AckleyFunction)

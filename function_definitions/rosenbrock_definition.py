@@ -1,4 +1,4 @@
-def RosenbrockFunction(X,Y):
-    return (X-1)**2 + 100*(Y-X**2)**2
+def RosenbrockFunction(x,y):
+    return (x-1)**2 + 100*(y-x**2)**2
 
 

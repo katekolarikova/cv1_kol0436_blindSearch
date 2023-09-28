@@ -1,5 +1,4 @@
 import numpy as np
 
-
-def SphereFunction(X, Y):
-    return np.sum(np.power(X, 2))
+def SphereFunction(x, y):
+    return x ** 2 + y ** 2

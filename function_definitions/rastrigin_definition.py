@@ -1,9 +1,4 @@
-import math
-
 import numpy as np
 
-
-def RastriginFunction(X,Y):
-    a = 10
-    return (X**2 - 10 * np.cos(2 * np.pi * X)) + \
-            (Y**2 - 10 * np.cos(2 * np.pi * Y)) + 20
+def RastriginFunction(x, y):
+    return 20 + x ** 2 - 10 * np.cos(2 * np.pi * x) + y ** 2 - 10 * np.cos(2 * np.pi * y)
