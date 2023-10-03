@@ -16,8 +16,8 @@ from plot_print import Print3DPlot
 # schwefel
 # griewank
 # Levy
-#Michalewicz
-#Zakharov
+# Michalewicz
+# Zakharov
 
 
 if __name__=="__main__":
