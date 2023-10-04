@@ -6,7 +6,7 @@ import numpy as np
 # normal distribution - rovnomerne rozlozeni vzdalenosti
 
 
-# generates random neighbours for given pointin given distance (standart deviation)
+# generates random neighbours for given point in given distance (standart deviation)
 def generate_neighbours(x, y, distance, lowerLimit, upperLimit, st_dev_x=1, st_dev_y=1):
 
     new_x = np.random.normal(loc=x, scale=st_dev_x, size=None)
