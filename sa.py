@@ -2,7 +2,7 @@ import numpy as np
 from numpy import random
 
 
-def generate_neighbours(x, y, distance, lowerLimit, upperLimit, st_dev_x=1, st_dev_y=1):
+def generate_neighbours(x, y, distance, lowerLimit, upperLimit, st_dev_x=2, st_dev_y=2):
 
     new_x = np.random.normal(loc=x, scale=st_dev_x, size=None)
     new_y = np.random.normal(loc=y, scale=st_dev_y, size=None)
@@ -22,7 +22,7 @@ def generate_neighbours(x, y, distance, lowerLimit, upperLimit, st_dev_x=1, st_d
 
 
 
-def sa(func, iterationCount, lowerLimitX, upperLimitX, lowerLimitY, upperLimitY, st_dev_x, st_dev_y):
+def simulated_annealing(func, iterationCount, lowerLimitX, upperLimitX, lowerLimitY, upperLimitY, st_dev_x, st_dev_y):
     # generate first random solution
     currentX = random.uniform(lowerLimitX, upperLimitX)
     currentY = random.uniform(lowerLimitY, upperLimitY)
@@ -59,7 +59,7 @@ def sa(func, iterationCount, lowerLimitX, upperLimitX, lowerLimitY, upperLimitY,
             else:
                 probability = round(np.exp(np.float128(-energy_difference) /np.float128( temperature)))
                 # vyhneme se lokalnim
-                # s klesajici teplotou se pravdepodobnost zmeny reseni snizuje
+                # with decreasing temperature, probability of accepting worse solution decreases
                 if probability > random.uniform(0, 1): # accept solution if randomly generated number is lower
                     currentX = x
                     currentY = y

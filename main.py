@@ -8,17 +8,9 @@ from function_definitions.schewel_definition import SchewelFunction
 from function_definitions.sphere_definition import SphereFunction
 from function_definitions.zakharov_definition import ZakharovFunction
 from plot_print import Print3DPlot
-
-# sphere
-# rosenbrock
-# ackley
-# rastrigin
-# schwefel
-# griewank
-# Levy
-# Michalewicz
-# Zakharov
-
+from blind_search import BlindSearch
+from hill_climbing import HillClimbing
+from sa import simulated_annealing
 
 if __name__=="__main__":
-    Print3DPlot(AckleyFunction)
+    Print3DPlot(AckleyFunction, simulated_annealing)

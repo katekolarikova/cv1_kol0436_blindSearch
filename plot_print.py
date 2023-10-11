@@ -4,14 +4,12 @@ from matplotlib.animation import FuncAnimation
 import matplotlib; matplotlib.use("TkAgg")
 
 
-from blind_search import BlindSearch
-from hill_climbing import HillClimbing
-from sa import sa
+
 
 
 # this function print 3D plot of given function, and add points found by blind search to it
 
-def Print3DPlot(func):
+def Print3DPlot(func, algorithm):
     r_min, r_max = -32.768, 32.768 # range of values for x and y
     x = np.linspace(r_min, r_max, 1500) # return array of evenly spaced values
     y = np.linspace(r_min, r_max, 1500)
@@ -33,7 +31,7 @@ def Print3DPlot(func):
     st_dev_y = np.std(y)
     print("Standard deviation of x: ", st_dev_x)
     print("Standard deviation of y: ", st_dev_y)
-    pointsHistory = sa(func, 1, r_min, r_max, r_min, r_max, st_dev_x, st_dev_y) # points found by blind search through time
+    pointsHistory = algorithm(func, 1, r_min, r_max, r_min, r_max, st_dev_x, st_dev_y)
     def update(t):
 
         point = pointsHistory[t]
